@@ -1,0 +1,24 @@
+{
+  "name": "gedcom_maker",
+  "version": "1.0.0",
+  "description": "Simple utility for creating gedcom files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidthehat/GEDCOM_maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidthehat/GEDCOM_maker/issues"
+  },
+  "homepage": "https://github.com/davidthehat/GEDCOM_maker#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0"
+  }
+}

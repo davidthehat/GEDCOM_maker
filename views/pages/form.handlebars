@@ -1,0 +1,17 @@
+<h3>{{title}}</h3>
+<form id="search_form" action="{{action}}" method="post">
+    <label for="username">Username: </label><br />
+    <input type="text" id="username" name="form_username" /><br />
+    <label for="password">Password: </label><br />
+    <input type="password" id="password" name="form_password" /><br />
+
+    <button type="submit">Submit</button>
+</form>
+
+{{#if error}}
+<p class="error">{{error_msg}}</p>
+{{/if}}
+
+{{#if login}}
+<a href="/signup">Need to register? Click here to sign-up</a>
+{{/if}}

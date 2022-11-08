@@ -17,8 +17,10 @@ async function createIndi(name, birthday, deathdate, famS, famC) {
         famS: famS,
         famC: famC
     }
+    //todo return id
     const indiList = await indiCollection.insertOne(toAdd);
-    return indiList;
+
+    return indiList.insertedId;
 }
 
 async function getIndi(id) {
@@ -38,7 +40,6 @@ async function addFamC(id, famC) {
     const indiList = await indiCollection.updateOne({ _id: ObjectId(id) }, { $push: { famC: famC } });
     return indiList;
 }
-
 
 module.exports = {
     a,

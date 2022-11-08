@@ -13,7 +13,8 @@ async function createFam(husb, wife, chil, marr, div) {
     }
 
     const famList = await famCollection.insertOne(toAdd);
-    return famList;
+    console.log("famList.insertedId: " + famList.insertedId);
+    return famList.insertedId;
 }
 
 async function getFam(id) {
@@ -33,3 +34,10 @@ async function addChil(id, chil) {
     const famList = await famCollection.updateOne({ _id: ObjectId(id) }, { $push: { chil: chil } });
     return famList;
 }
+
+module.exports = {
+    createFam,
+    getFam,
+    addDiv,
+    addChil,
+};

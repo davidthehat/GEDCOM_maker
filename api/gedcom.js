@@ -35,7 +35,7 @@ async function generateFile() {
     let file = [];
     file.push("0 HEAD", "1 SOUR GEDCOM_maker");
 
-    //todo fill in info from database
+    //fill in info from database
     for (let i of indiList) {
         addIndi(file, i);
     }

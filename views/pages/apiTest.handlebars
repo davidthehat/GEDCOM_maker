@@ -2,6 +2,31 @@
 <form id="test_form" action="{{action}}" method="post">
     <label for="input1">Input: </label><br />
     <input type="text" id="input1" name="test_form" /><br />
-
     <button type="submit">Submit</button>
+</form>
+
+<form id="test_form" action="{{action}}" method="post">
+    <label for="input1">FamId: </label><br />
+    <input type="text" id="input1" name="fam" /><br />
+
+    <label for="input2">Number: </label><br />
+    <input type="number" id="input2" name="n" /><br />
+    
+
+    <input type="hidden" name="action" value="nuplets" />
+    
+    <button type="submit">Generate Nuplets</button>
+</form>
+
+<form id="test_form" action="{{action}}" method="post">
+    <label for="input1">IndiId1: </label><br />
+    <input type="text" id="input1" name="p1" /><br />
+
+    <label for="input2">IndiId2: </label><br />
+    <input type="text" id="input2" name="p2" /><br />
+    
+
+    <input type="hidden" name="action" value="marry" />
+    
+    <button type="submit">Marry</button>
 </form>

@@ -19,8 +19,8 @@ function generateBirthday(p1birthday, p2birthday, marraigeDate, count) {
     } else {
         cdate = new Date(p1birthday.getFullYear() + 25);
     }
-
-    return new Date(cdate.getFullYear() + 2 + count);
+    cdate.setFullYear(cdate.getFullYear() + count);
+    return cdate;
     
 }
 
@@ -37,7 +37,7 @@ async function generateChild(famId, name, birthday, deathdate) {
     //ok for deathdate null, just pass on
 
     
-    let indiId = await indiApi.createIndi(name, birthday, deathdate, famId, null);
+    let indiId = await indiApi.createIndi(name, birthday, deathdate, [], famId);
     console.log(indiId);
     famApi.addChil(famId, indiId);
 }

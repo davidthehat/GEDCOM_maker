@@ -1,5 +1,5 @@
 const routes = require("./routes");
-const api = require("../api");
+
 
 const constructorMethod = (app) => {
     app.use("/", routes);

@@ -15,10 +15,9 @@ async function main() {
 
     let f1 = await api.commonApi.marry(i1, i2, "1/1/1990");
     await api.commonApi.generateNuplets(f1, 3);
-
-    console.log(await usersApi.checkUser("hello2", "worldss3"));
     
     connection.closeConnection();
+    return;
 }
 
 main();

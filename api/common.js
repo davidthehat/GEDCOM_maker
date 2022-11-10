@@ -47,7 +47,7 @@ async function generateNuplets(famId, n){
         await generateChild(famId, null, null, null); //todo generate unique names etc
     }
 }
-
+    
 async function marry(p1Id, p2Id, marr) {
     let famId = await famApi.createFam(p1Id, p2Id, [], marr, null);
     indiApi.addFamS(p1Id, famId);
